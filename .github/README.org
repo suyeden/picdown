@@ -1,0 +1,49 @@
+#+TITLE: picdown
+#+AUTHOR: suyeden
+#+EMAIL: 
+#+OPTIONS: toc:nil num:nil author:nil creator:nil LaTeX:t \n:t
+#+STARTUP: showall
+
+* picdown
+
+  [![GitHub license](https://img.shields.io/github/license/suyeden/picdown?color=blue)](https://github.com/suyeden/picdown/blob/master/LICENSE)
+
+** 概要
+   Picture Downloader
+
+   Webサイト上の画像ファイルを自動収集するための Emacs Lisp スクリプトです。（Windows 向け）
+
+   Google Chrome の ヘッドレスモードを用いて Web ページの取得を行い、また Windows 10 にデフォルトで付いている curl.exe を使って画像ファイルのダウンロードを行っています。
+   curl でも Web ページの取得はできるのですが、Headless-Chrome の方が画像ファイルの回収結果が良好だったため、Web ページの取得には Chrome を用いています。
+
+** 動作環境
+   - Windows 10 Home
+   - GNU Emacs 27.1
+   - Google Chrome 98.0.4758.102
+   - curl 7.79.1 （Windows 10 であればデフォルトで付いているはず）
+
+** 導入方法
+   1. GNU Emacs をダウンロードして適当な場所に展開した上で、emacs.exe までのパスを通してください。
+   2. Google Chrome をインストールしてください。
+   3. Releases から ~picdown.zip~ をダウンロードし、展開してから中身を適当な場所に配置してください。
+      （このとき、中身の ~picdown.bat~ ファイルと ~picdown~ フォルダは同じ場所に置くようにしてください。）
+
+** 使用方法
+   ~picdown.txt~ に対象となる Web ページの URL を羅列していってください。
+   picdown は ~picdown.txt~ に羅列された URL を上から読み取り、順に画像ファイルをダウンロードしていきます。
+
+   ~picdown.bat~ を実行することで、picdown が起動します。
+   「Windows によって PC が保護されました」というメッセージが出てきた場合は、「詳細情報」を押してから「実行」をクリックすると以降使えるようになります。
+
+   ~picdown.txt~ が無い状態で picdown を起動すると、 ~picdown.txt~ を新たに作成してくれます。
+
+   1つの URL につき1つのフォルダが作成され、ダウンロードされた画像はこのフォルダの中に格納されます。
+   フォルダの名前は、それぞれの URL の Web ページのタイトルを取得して付けられます。
+
+** 作者メモ
+   Web ページ取得のためにヘッドレスモードで Chrome を起動する際、真っ黒のウィンドウが画面に一瞬映ります。
+   また JavaScript によるファイルの動的読み込みには対応していないため、Twitter や Google の画像検索の結果などのようなページでは画像のダウンロードができません。
+
+** 注意事項
+   画像をダウンロードする際には、著作権法をしっかりと守り、常識の範囲内で、また個人の責任のもとで行ってください。
+   また相手のサイトに集中して大量のアクセスを送ってしまうと、サーバーに負荷をかけて多くの人に迷惑をかけることになるため、マナー対策としてダウンロードの間隔を5秒開けるように設定しています。
