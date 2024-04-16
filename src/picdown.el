@@ -5,7 +5,7 @@
 ;; Author: suyeden
 ;; Version: 1.0.0
 ;; Keywords: tools
-;; Package-Requires: ((emacs "27.1") (master-lib "1.0.0") (eprintf.dll) (Google Chrome "98.0.4758.102") (curl "7.79.1"))
+;; Package-Requires: ((emacs "27.1") (master-lib "1.0.0") (Google Chrome "98.0.4758.102") (curl "7.79.1"))
 
 ;; This file is NOT part of GNU Emacs.
 

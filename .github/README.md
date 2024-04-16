@@ -19,6 +19,7 @@ curl でも Web ページの取得はできるのですが、Headless-Chrome の
 
 -   Windows 10 Home
 -   GNU Emacs 27.1
+-   master-lib 1.0.0 （<https://github.com/suyeden/master-lib>）
 -   Google Chrome 98.0.4758.102
 -   curl 7.79.1 （Windows 10 であればデフォルトで付いているはず）
 

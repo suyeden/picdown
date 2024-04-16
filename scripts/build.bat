@@ -10,15 +10,15 @@ if exist .\eprintf.dll (
 
 gcc -I ./ -shared -o eprintf.dll eprintf.c
 
-if exist ..\release (
-   rmdir /S /Q ..\release
+cd %script_dir%\..\
+
+if exist .\release (
+   rmdir /S /Q .\release
 )
 
-mkdir ..\release
-mkdir ..\release\picdown
-mkdir ..\release\picdown\lib
-
-cd %script_dir%\..\
+mkdir .\release
+mkdir .\release\picdown
+mkdir .\release\picdown\lib
 
 copy .\bin\picdown.bat .\release\picdown.bat
 copy .\configs\picdown.txt .\release\picdown.txt
